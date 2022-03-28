@@ -2,7 +2,8 @@ const domSelectors ={
     result: ".result",
     searchBtn: ".search_btn",
     searchInput: ".search-bar",
-    resultTotal: ".total-result"
+    resultTotal: ".total-result",
+    loading: ".spinner-box"
 }
 
 function generateSearch(data){
@@ -34,6 +35,12 @@ function renderAlbums(data){
     render(ele, temp);
 }
 
+function renderLoading(){
+    let ele = document.querySelector(domSelectors.loading);
+    let temp = `<div class="three-quarter-spinner"></div>`
+    render(ele, temp);
+}
+
 function getSearch(query) {
     return fetch(`https://itunes.apple.com/search?term=${query}&media=music&entity=album&attribute=artistTerm&limit=200`).then(res=>res.json())
 }
@@ -46,6 +53,7 @@ function setUpEvent(){
         }
         else {
             return getSearch(ele.value).then((data) => {
+                renderLoading();
                 renderAlbums(data);
                 renderTotal(data);
                 renderSearch(data);
