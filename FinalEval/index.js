@@ -35,7 +35,7 @@ function renderAlbums(data){
     render(ele, temp);
 }
 
-function renderLoading(){
+function renderLoading(data){
     let ele = document.querySelector(domSelectors.loading);
     let temp = `<div class="three-quarter-spinner"></div>`
     render(ele, temp);
@@ -53,7 +53,7 @@ function setUpEvent(){
         }
         else {
             return getSearch(ele.value).then((data) => {
-                renderLoading();
+                renderLoading(data);
                 renderAlbums(data);
                 renderTotal(data);
                 renderSearch(data);
@@ -67,3 +67,4 @@ function render(ele, temp) {
 }
 
 setUpEvent();
+
