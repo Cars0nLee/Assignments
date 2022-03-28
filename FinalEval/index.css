@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 1000px;
+    padding: 25px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: blue;
+}
+
+.search button {
+    width: 100px;
+    height: 50px;
+}
+
+.search input {
+    height: 50px;
+    width: 50%;
+}
+
+.total-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
