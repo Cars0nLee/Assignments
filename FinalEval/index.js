@@ -5,12 +5,11 @@ const domSelectors ={
     resultTotal: ".total-result"
 }
 
-
 function generateSearch(data){
     let result = data.results;
     return result.map(data=>{
-        return `<img src="${data.artworkUrl100}" /> <h3>${data.artistName}</h3>`
-    })
+        return `<img src="${data.artworkUrl100}" /> <h3>${data.collectionName}</h3>`
+    }).join("");
 }
 
 function renderSearch(data){
