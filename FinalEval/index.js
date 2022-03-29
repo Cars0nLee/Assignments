@@ -8,6 +8,7 @@ const domSelectors ={
 
 function generateSearch(data){
     let result = data.results;
+    console.log(result);
     return result.map(data=>{
         return `<img src="${data.artworkUrl100}" /> <h3>${data.collectionName}</h3>`
     }).join("");

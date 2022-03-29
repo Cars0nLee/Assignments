@@ -23,6 +23,7 @@
 .search button {
     width: 100px;
     height: 50px;
+    cursor: pointer;
 }
 
 .search input {
@@ -38,7 +39,8 @@
 
 .result {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
     text-align: center;
     padding: 25px;
 }
